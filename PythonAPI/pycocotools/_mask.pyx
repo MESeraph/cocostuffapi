@@ -110,7 +110,7 @@ def _toString(RLEs Rs):
         py_string = c_string
         objs.append({
             'size': [Rs._R[i].h, Rs._R[i].w],
-            'counts': py_string
+            'counts': str(py_string, encoding='utf-8')
         })
         free(c_string)
     return objs
